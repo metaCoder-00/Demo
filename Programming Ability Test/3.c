@@ -1,7 +1,7 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 
-void Shift(int *a, int lenth, int digits);//a：目标操作数组，lenth：数组长度，digits：要移动的位数
+int* Shift(int *a, int lenth, int digits);//a：目标操作数组，lenth：数组长度，digits：要移动的位数
 
 int main(int argc, char const *argv[])
 {
