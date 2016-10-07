@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main (void)
+{
+	printf ("请输入一个三位数\n");
+	int a = 0;
+	scanf("%d", &a);
+	int b = a % 10; //个位数
+	int m = a / 10; 
+	int n = m / 10; //百位数
+	int p = m % 10; //十位数
+	int q = n + p * 10 + b * 100;
+	printf("逆序的数为%d\n", q); 
+	return 0;
+}

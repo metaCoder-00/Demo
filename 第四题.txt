@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main (void)
+{	
+	printf ("请输入两个数a,b\n");
+	int a = 0, b = 0, t = 0;
+	scanf("%d %d", &a,&b);
+	while (b != 0)
+	{
+		t = a % b;
+		a = b;
+		b = t;				
+	}
+	printf("a,b的最大公约数为%d\n", a);
+	return 0;
+}
