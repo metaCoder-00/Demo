@@ -1,0 +1,12 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int a = 75^40;
+    char b[100];
+    itoa(a,b,2);
+    printf("%s",b);
+}
+
+
