@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+ int a,b;
+ printf("输入两个数");
+ scanf("%d %d",&a,&b);
+ if(a>b)
+ {	
+	int t;
+	t=a;
+	a=b;
+	b=t;
+ }
+ for(int n=a;n>0;n--)
+ {
+  if((b%n==0)&&(a%n==0))
+	{
+	 printf("最大公约数为%d",n);
+	 break;
+	 }
+ }
+ return 0;
+}
