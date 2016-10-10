@@ -1,0 +1,13 @@
+#include"stdio.h"
+void main(){
+int a,b,c,d,e;
+scanf("%d",&d);
+if(d<100||d>999)
+printf("这不是三位数");
+else
+a=d%10;
+b=d%100/10;
+c=d/100;
+e=c+10*b+100*a;
+printf("%d",e);
+}

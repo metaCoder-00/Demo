@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+ int a,b,c,d,t;
+ 
+ printf("请输入两个数:\n");
+ scanf("%d%d",&a,&b);
+ if(a<b)
+ {
+ c=a;
+ a=b;
+ b=c; 
+ }
+ t=a%b;
+ if(t==0)
+ {
+ d=b;
+ printf("d=%d",d);
+ exit(0);
+ }
+ do
+ {
+ a=b;
+ b=t;
+ t=a%b;
+ }
+ while(t!=0); 
+ printf("result=%d",b);
+}
