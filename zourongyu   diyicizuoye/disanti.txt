@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+	int a,b,t;
+	printf("输入两个非零正整数：");
+	scanf("%d %d",&a,&b);
+	if(a>b)
+	{
+		int min=b;
+		b=a;
+		a=min;
+	}
+	for(t=a;t>0;t--)
+	{
+		if(a%t==0)
+			if(b%t==0)
+				break;
+	}
+	printf("最大公约数是：%d\n",t);
+}
