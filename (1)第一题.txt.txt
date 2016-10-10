@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include<stdlib.h>
+void main()
+{
+int t,m,i;
+char s[8];
+t=75^40;
+itoa(t, s, 2); 
+m=sizeof(s);
+if(m<9)
+for(i=9-m;i>0;i--)
+printf("%c",'0');
+printf("%s\n",s);
+}
