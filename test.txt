@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 shi
+=======
+For github learning
+>>>>>>> cf21050e30f19da5017b43cf8fd3c6325dbaf8db
