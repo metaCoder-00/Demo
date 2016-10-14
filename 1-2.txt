@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include<stdio.h>
 int main()
 {
@@ -8,3 +9,15 @@ int b=a/100+(a/10)%10*10+(a%10)*100;
 printf("µ¹ĞğÊı×ÖÎª:%d\n",b);
 return 0;
 }
+=======
+#include<stdio.h>
+int main()
+{
+int a;
+printf("è¯·è¾“å…¥ä¸‰ä½æ•°:");
+scanf("%d",&a);
+int b=a/100+(a/10)%10*10+(a%10)*100;
+printf("é€†åºæ•°ä¸º:%d\n",b);
+return 0;
+}
+>>>>>>> 2151f8ca20287384c3b81fd78dcf660b8a2d9efa
