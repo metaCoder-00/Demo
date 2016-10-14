@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int number,x;
+	char num[20];
+	cout<<"please input a number:";
+	cin>>number;
+	if(number>100&&number<1000)
+		for(int i=1;i<4;i++)
+		{
+			x=number%10;
+			number=number/10;
+				if(x)
+					cout<<x;
+		}
+	else
+		cout<<"Error!"<<endl;
+	return 0;
+}

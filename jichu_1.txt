@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a=75,b=67,c=99,d;
+	d=a&b|c;
+	cout<<d<<endl;
+	return 0;
+}

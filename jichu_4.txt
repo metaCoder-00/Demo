@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a,b,t,gcd;
+	cout<<"please input a,b(a>b>0)=";
+	cin>>a>>b;
+	t=a%b;
+	if(!t)
+		gcd=b;
+	else
+	{
+		while(a%b!=0)
+		{
+			a=b;
+			b=t;
+		}
+		gcd=b;
+	}
+	cout<<"The greatest common divisor is:"<<gcd<<endl;
+	return 0;
+}

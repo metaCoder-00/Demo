@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int num1,num2,temp,n=1;
+	cout<<"please input two numbers:";
+	cin>>num1>>num2;
+	while(1)
+	{
+		if(num1%2==0&&num2%2==0)
+		{
+			num1/=2;
+			num2/=2;
+			n=n*2;
+		}
+		else
+		{
+			temp=abs(num1-num2);
+			num1=(num1<num2)?num1:num2;
+			num2=temp;
+		}
+		if(temp==num1)
+			break;
+	}
+	cout<<"The greatst common divisor is:"<<temp*n<<endl;
+	return 0;
+}
