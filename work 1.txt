@@ -1,0 +1,52 @@
+1、
+#include<studio.h>
+void main()
+{
+	char a,b,c;
+	a=Ox4b; b=Ox43; c=Ox20;
+	a=(a&b)|c;
+	printf(“%x\n”,a);
+}
+2、
+#include<studio.h>
+void main()
+{
+	int i,a,b=0,x;
+	scanf(“%d”,&a);
+	for(i=0;i<3;i++)
+	{
+		x=a%10;
+		a/=10;
+		b=b*10+x;
+	}
+	printf(“a=%d\n”,b);
+}
+3、
+#include<studio.h>
+void main()
+{
+	int a,b,t=1;
+	scanf(“%d,%d”,&a,&b);
+	for(;t!=0;)
+	{
+		t=a%b;
+		a=b;
+		b=t;
+	}
+	printf(“最大公约数%d\n”,b);
+}
+4、
+#include<studio>
+void main()
+{
+	int a,b,q,r1,n;
+	scanf(“%d,%d”,&a,&b);
+	for(;r1!=0;)
+	{
+		q=a/b;
+		r1=a-b*q;
+		a=b;
+		b=r1;
+	}
+	printf(“最大公约数%d\n”,b);
+}
