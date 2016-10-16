@@ -1,0 +1,43 @@
+#include <reg52.h>
+#include <stdio.h>
+void main ()
+{	 
+	int type =10;
+	switch (type)
+	{
+		case 0:
+		P0 = 252;
+		break;
+		case 1:
+		P0 = 96;
+		break;
+		case 2:
+		P0 = 218;
+		break;
+		case 3:
+		P0 = 242;
+		break;
+		case 4:
+		P0 = 102;
+		break;
+		case 5:
+		P0 = 182;
+		break;
+		case 6:
+		P0 = 190;
+		break;
+		case 7:
+		P0 = 224;
+		break;
+		case 8:
+		P0 = 254;
+		break;
+		case 9:
+		P0 = 246;
+		break;
+		case 10:
+		P0 = 226;
+		break;
+	}
+	while(1);
+}
