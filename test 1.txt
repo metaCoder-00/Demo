@@ -1,0 +1,56 @@
+1、
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	char a,b,c,A[8];
+	a=75;
+	b=67;
+	c=32;
+	a=(a&b)|c;
+	itoa(a,s,2);
+	printf("%s\n",A);
+}
+2、
+#include<stdio.h>
+void main()
+{
+	int i,a,b=0,x;
+	scanf("%d",&a);
+	for(i=0;i<3;i++)
+	{
+		x=a%10;
+		a/=10;
+		b=b*10+x;
+	}
+	printf("a=%d\n",b);
+}
+3、
+#include<stdio.h>
+void main()
+{
+	int a,b,t=1;
+	scanf("%d%d",&a,&b);
+	for(;t!=0;)
+	{
+		t=a%b;
+		a=b;
+		b=t;
+	}
+	printf("max=%d\n",a);
+}
+4、
+#include<stdio.h>
+void main()
+{
+	int a,b,q,r1;
+	scanf("%d%d",&a,&b);
+	for(;r1!=0;)
+	{
+		q=a/b;
+		r1=a-b*q;
+		a=b;
+		b=r1;
+	}
+	printf("max=%d\n",a);
+}
