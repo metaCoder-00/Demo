@@ -1,0 +1,109 @@
+
+第一题：
+
+#include <reg52.h>
+#define uchar unsigned char
+#define uint unsigned int
+ 
+uchar code led[] = {
+    0x3f,0x06,0x5b,0x4f,
+    0x66,0x6d,0x7d,0x07,
+    0x7f,0x6f,0x71
+};
+
+
+void delayms(uint xms);
+ 
+void main()
+{
+    uchar i;
+    P0 = 0xfe;
+    for (i = 0; i <11; i++)
+    {
+        P0 = led[i];
+        delayms(1000);
+    }   
+}
+
+void delayms(uint xms)
+{
+    uint i, j;
+    for (i = xms; i > 0; i--)
+        for (j = 110; j > 0; j--);
+}
+
+
+第二：
+#include <reg52.h>
+#define uchar unsigned char
+#define uint unsigned int
+ 
+uchar code led[] = {
+    0x3f,0x06,0x5b,0x4f,
+    0x66,0x6d,0x7d,0x07,
+    0x7f,0x6f,0x71
+};
+
+
+void delayms(uint xms);
+ 
+void main()
+{
+    uchar i;
+	for(i=7;i<=10;i++)
+	{
+		led[i]=led[i+1];
+	}
+    P0 = 0xfe;
+    for (i = 0;i<10;i++)
+    {
+        P0 = led[i];
+        delayms(1000);
+    }   
+}
+
+void delayms(uint xms)
+{
+    uint i, j;
+    for (i = xms; i > 0; i--)
+        for (j = 110; j > 0; j--)
+            ;
+}
+
+
+第三：
+
+#include <reg52.h>
+#define uchar unsigned char
+#define uint unsigned int
+ 
+uchar code led[] = {
+    0x3f,0x06,0x5b,0x4f,
+    0x66,0x6d,0x7d,0x07,
+    0x7f,0x6f,0x71  
+	};
+
+
+void delayms(uint xms);
+ 
+void main()
+{
+    uchar i;
+	for( i = 2;i< = 10;i++)
+		led[i+1]=led[i];
+	led[2]=0x71;
+		
+    P0 = 0xfe;
+    for (i = 0; i <10; i++)
+    {
+        P0 = led[i];
+        delayms(1000);
+    }   
+}
+
+void delayms(uint xms)
+{
+    uint i, j;
+    for (i = xms; i > 0; i--)
+        for (j = 110; j > 0; j--);
+}
