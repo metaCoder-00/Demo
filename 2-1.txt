@@ -1,0 +1,21 @@
+#include<reg52.h>
+#include<stdio.h>
+void delay(int x)
+{
+	int i,j;
+	for(i=0;i<x;i++)
+		for(j=0;j<120;j++);
+}
+void main()
+{
+	int shuzi[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x71};
+	while(1)
+	{
+		int i;
+		for(i=0;i<10;i++)
+		{
+			P0=shuzi[i];
+			delay(500);
+	}
+   }
+}
