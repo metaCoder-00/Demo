@@ -1,0 +1,57 @@
+C51 COMPILER V9.01   插入F                                                                 10/24/2016 14:09:13 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 插入F
+OBJECT MODULE PLACED IN 插入f.OBJ
+COMPILER INVOKED BY: F:\c51\C51\BIN\C51.EXE 插入f.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          
+   3          void delay(void)
+   4          {
+   5   1              int i;
+   6   1              for(i=0;i<32000;i++);
+   7   1      }
+   8          
+   9          
+  10          
+  11          
+  12          void main()
+  13          {
+  14   1              int hzy[15]={252,96,218,242,102,182,190,224,254,230,142};
+  15   1              int i;
+  16   1              /*for(i=0;i<11;i++)
+  17   1      {               if(hzy[i]==218)
+  18   1                      a=i;
+  19   1      }*/
+  20   1              for(i=9;i>2;i--)
+  21   1              {hzy[i+1]=hzy[i];}
+  22   1              hzy[3]=142;
+  23   1      
+  24   1      
+  25   1              for(i=0;i<15;i++)
+  26   1      {
+  27   2              P0=hzy[i];
+  28   2              delay();
+  29   2              delay();
+  30   2              
+  31   2      } 
+  32   1      
+  33   1      }
+  34          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    110    ----
+   CONSTANT SIZE    =     30    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      30
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

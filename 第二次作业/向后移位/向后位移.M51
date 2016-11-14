@@ -1,0 +1,116 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/23/2016  17:42:26  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+F:\C51\C51\BIN\BL51.EXE 向后位移.obj TO 向后位移
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  向后位移.obj (向篲位移)
+  F:\C51\C51\LIB\C51S.LIB (?C_STARTUP)
+  F:\C51\C51\LIB\C51S.LIB (?C?COPY)
+
+
+LINK MAP OF MODULE:  向后位移 (向篲位移)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0020H     UNIT         _DATA_GROUP_
+            IDATA   0028H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     00F6H     UNIT         ?C?LIB_CODE
+            CODE    00F9H     0080H     UNIT         ?PR?MAIN?向篲位移
+            CODE    0179H     001EH     UNIT         ?CO?向篲位移
+            CODE    0197H     0011H     UNIT         ?PR?DELAY?向篲位移
+            CODE    01A8H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   向后位移 (向篲位移)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?向篲位移
+
+?PR?MAIN?向篲位移              0008H    0020H
+  +--> ?CO?向篲位移
+  +--> ?PR?DELAY?向篲位移
+
+
+
+SYMBOL TABLE OF MODULE:  向后位移 (向篲位移)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        向篲位移
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/23/2016  17:42:26  PAGE 2
+
+
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0197H         PUBLIC        delay
+  D:00B8H         PUBLIC        IP
+  C:00F9H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0179H         SYMBOL        _?ix1000
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0197H         LINE#         3
+  C:0197H         LINE#         4
+  C:0197H         LINE#         6
+  C:01A7H         LINE#         7
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        hzy
+  D:0004H         SYMBOL        i
+  D:0026H         SYMBOL        a
+  -------         ENDDO         
+  C:00F9H         LINE#         12
+  C:00F9H         LINE#         13
+  C:00F9H         LINE#         14
+  C:010CH         LINE#         16
+  C:010FH         LINE#         17
+  C:011EH         LINE#         18
+  C:0122H         LINE#         20
+  C:012DH         LINE#         22
+  C:013CH         LINE#         23
+  C:013CH         LINE#         24
+  C:0152H         LINE#         25
+  C:0159H         LINE#         26
+  C:015DH         LINE#         27
+  C:015DH         LINE#         28
+  C:0167H         LINE#         29
+  C:016AH         LINE#         30
+  C:016DH         LINE#         31
+  C:0178H         LINE#         33
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        向篲位移
+
+  -------         MODULE        ?C?COPY
+  C:00D3H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+Program Size: data=41.0 xdata=0 code=436
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,57 @@
+C51 COMPILER V9.01   向篲位移                                                              10/23/2016 17:42:25 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 向篲位移
+OBJECT MODULE PLACED IN 向后位移.OBJ
+COMPILER INVOKED BY: F:\c51\C51\BIN\C51.EXE 向后位移.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          
+   3          void delay(void)
+   4          {
+   5   1              int i;
+   6   1              for(i=0;i<32000;i++);
+   7   1      }
+   8          
+   9          
+  10          
+  11          
+  12          void main()
+  13          {
+  14   1              int hzy[15]={252,96,218,242,102,182,190,224,254,230,142};
+  15   1              int i,a;
+  16   1              for(i=0;i<15;i++)
+  17   1      {               if(hzy[i]==224)
+  18   2                      a=i;
+  19   2                      
+  20   2      }
+  21   1          
+  22   1              for(i=a;i<15;i++)
+  23   1                      {
+  24   2                      hzy[i]=hzy[i+1];
+  25   2                      }
+  26   1              for(i=1;i<15;i++)
+  27   1      {
+  28   2              P0=hzy[i];
+  29   2              delay();
+  30   2              delay();
+  31   2      } 
+  32   1      
+  33   1      }
+  34          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    145    ----
+   CONSTANT SIZE    =     30    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      32
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
